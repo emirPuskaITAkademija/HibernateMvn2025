@@ -4,10 +4,10 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.StringJoiner;
 
-public class Actor implements Serializable {
+public class Actor extends AbstractActorRecord implements Serializable {
     private Integer actorId;
     private String firstName;
-    private  String lastName;
+    private String lastName;
     private Timestamp lastUpdate;
 
     public Actor() {
