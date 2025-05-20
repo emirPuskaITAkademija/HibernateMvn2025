@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.itakademija.actor.persistence.Actor" table="actor" catalog="sakila" optimistic-lock="version">
+        <id name="actorId" type="java.lang.Integer">
+            <column name="actor_id"/>
+            <generator class="identity"/>
+        </id>
+
+        <property name="firstName" type="string">
+            <column name="first_name" length="45" not-null="true"/>
+        </property>
+
+        <property name="lastName" type="string">
+            <column name="last_name" length="45" not-null="true"/>
+        </property>
+
+        <property name="lastUpdate" type="java.sql.Timestamp">
+            <column name="last_update" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

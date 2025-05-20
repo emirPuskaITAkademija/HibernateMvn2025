@@ -1,6 +1,6 @@
 package com.itakademija.crud;
 
-import com.itakademija.country.Country;
+import com.itakademija.country.persistence.Country;
 import com.itakademija.util.HibernateUtil;
 import org.hibernate.Session;
 
