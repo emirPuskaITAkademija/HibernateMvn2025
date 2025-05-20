@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.itakademija.country.Country" table="country" catalog="sakila" optimistic-lock="version">
+        <id name="countryId" type="java.lang.Integer">
+            <column name="country_id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="country" type="string">
+            <column name="country" length="50" not-null="true"/>
+        </property>
+        <property name="lastUpdate" type="java.sql.Timestamp">
+            <column name="last_update" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
