@@ -5,7 +5,7 @@ import org.hibernate.Query;
 
 import java.util.List;
 
-public class CountryDao implements Dao<Country> {
+public class CountryDao implements Dao<Country, Integer> {
     @Override
     public List<Country> getAll() {
         return executeInTransaction(session -> {
@@ -15,7 +15,7 @@ public class CountryDao implements Dao<Country> {
     }
 
     @Override
-    public Country getById(int id) {
+    public Country getById(Integer id) {
         return executeInTransaction(session -> session.get(Country.class, id));
     }
 

@@ -7,11 +7,11 @@ import org.hibernate.Session;
 import java.util.List;
 import java.util.function.Function;
 
-public interface Dao<E> {
+public interface Dao<E, PK> {
 
     List<E> getAll();
 
-    E getById(int id);
+    E getById(PK id);
 
     E save(E e);
 

@@ -11,5 +11,6 @@
         <property name="show_sql">true</property>
         <mapping resource="com/itakademija/country/persistence/Country.hbm.xml"/>
         <mapping resource="com/itakademija/actor/persistence/Actor.hbm.xml"/>
+        <mapping resource="com/itakademija/bank/account/persistence/BankAccount.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

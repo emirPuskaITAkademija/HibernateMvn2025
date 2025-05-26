@@ -4,14 +4,14 @@ import com.itakademija.Dao;
 
 import java.util.List;
 
-public class ActorDao implements Dao<Actor> {
+public class ActorDao implements Dao<Actor, Integer> {
     @Override
     public List<Actor> getAll() {
         return executeInTransaction(session -> session.createQuery("from Actor").list());
     }
 
     @Override
-    public Actor getById(int id) {
+    public Actor getById(Integer id) {
         return executeInTransaction(session -> session.get(Actor.class, id));
     }
 
