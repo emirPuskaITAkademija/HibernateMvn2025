@@ -19,7 +19,7 @@ public interface Dao<E, PK> {
 
     void update(E e);
 
-    default <R> R executeInTransaction(Function<Session, R> function) {
+    default <R>  R executeInTransaction(Function<Session, R> function) {
         try {
             Session session = HibernateUtil.getSessionFactory().openSession();
             session.getTransaction().begin();

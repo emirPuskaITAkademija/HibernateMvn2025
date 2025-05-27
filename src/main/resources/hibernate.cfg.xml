@@ -12,5 +12,7 @@
         <mapping resource="com/itakademija/country/persistence/Country.hbm.xml"/>
         <mapping resource="com/itakademija/actor/persistence/Actor.hbm.xml"/>
         <mapping resource="com/itakademija/bank/account/persistence/BankAccount.hbm.xml"/>
+        <mapping resource="com/itakademija/publisher/Publisher.hbm.xml"/>
+        <mapping resource="com/itakademija/book/Book.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

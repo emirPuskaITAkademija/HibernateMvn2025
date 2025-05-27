@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.itakademija.book.Book" table="book" catalog="sakila" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="title" type="string">
+            <column name="title" length="45" not-null="true"/>
+        </property>
+        <property name="pages" type="java.lang.Integer">
+            <column name="pages"  not-null="true"/>
+        </property>
+        <property name="author" type="string">
+            <column name="author" length="45" not-null="true"/>
+        </property>
+        <many-to-one name="publisher" class="com.itakademija.publisher.Publisher" fetch="select">
+            <column name="publisher_id" not-null="false"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

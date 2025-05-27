@@ -3,14 +3,22 @@ package com.itakademija;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.itakademija.country.gui.CountryTablePanel;
+import com.itakademija.publisher.Publisher;
+import com.itakademija.publisher.PublisherDao;
 
 import javax.swing.*;
 
 public class SakilaApplication {
     public static void main(String[] args) throws Exception {
+
+        Publisher publisher = new Publisher();
+        publisher.setName("Guide Book");
+        publisher.setAddress("Trg Međunarodnog Prijateljstva");
+        PublisherDao publisherDao = new PublisherDao();
+        publisherDao.save(publisher);
 //        UIManager.setLookAndFeel(new FlatDarkLaf());
-        Runnable worker = SakilaApplication::createAndShowGUI;
-        SwingUtilities.invokeLater(worker);
+//        Runnable worker = SakilaApplication::createAndShowGUI;
+//        SwingUtilities.invokeLater(worker);
 
 //        Actor actor = new Actor();
 //        actor.setFirstName("Jovan");
