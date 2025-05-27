@@ -1,13 +1,18 @@
 package com.itakademija.publisher;
 
+import com.itakademija.book.Book;
+
 import java.io.Serializable;
+import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Set;
 import java.util.StringJoiner;
 
 public class Publisher implements Serializable {
     private Long id;
     private String name;
     private String address;
+    private Set<Book> books = new LinkedHashSet<>();
 
     public Publisher() {
     }
@@ -40,6 +45,14 @@ public class Publisher implements Serializable {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Set<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(Set<Book> books) {
+        this.books = books;
     }
 
     @Override

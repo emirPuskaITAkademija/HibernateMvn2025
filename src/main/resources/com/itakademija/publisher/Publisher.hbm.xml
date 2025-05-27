@@ -13,5 +13,11 @@
         <property name="address" type="string">
             <column name="address" length="45" not-null="true"/>
         </property>
+        <set name="books" table="book" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="publisher_id"  not-null="false"/>
+            </key>
+            <one-to-many class="com.itakademija.book.Book"/>
+        </set>
     </class>
 </hibernate-mapping>
